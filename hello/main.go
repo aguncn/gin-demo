@@ -3,9 +3,10 @@ package main
 import "github.com/gin-gonic/gin"
 
 func main() {
-	r := gin.Default()
-	r.GET("/", func(c *gin.Context) {
+	router := gin.Default()
+	router.GET("/", func(c *gin.Context) {
 		c.String(200, "Hello, Gin Demo.")
 	})
-	r.Run() // listen and serve on 0.0.0.0:8080
+
+	router.Run() // listen and serve on 0.0.0.0:8080
 }
